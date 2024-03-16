@@ -8,8 +8,6 @@ from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 
 import os
 
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-
 # Initialize session state variables
 if 'buffer_memory' not in st.session_state:
     st.session_state.buffer_memory = ConversationBufferWindowMemory(k=3, return_messages=True)
